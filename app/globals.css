@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+
+/* It defines the vars at the root html */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* These are the themes used in classnames like bg-[--color-background] */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-inter: "Inter", sans-serif;
+}
+
+/* Media query based on the system DARK theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Body of the page */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
